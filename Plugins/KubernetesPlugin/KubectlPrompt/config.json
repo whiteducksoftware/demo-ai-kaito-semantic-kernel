@@ -15,11 +15,6 @@
         "name": "input",
         "description": "The natural language input to be converted into kubectl commands",
         "default": ""
-      },
-      {
-        "name": "os",
-        "description": "Operating system of the user's device",
-        "default": "Windows"
       }
     ]
   }

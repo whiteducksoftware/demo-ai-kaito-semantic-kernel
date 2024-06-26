@@ -5,5 +5,4 @@ Question:
 +++
 {{$input}}
 +++
-Operating System {{$os}}
-+++
+
