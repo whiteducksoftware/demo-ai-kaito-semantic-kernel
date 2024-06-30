@@ -1,6 +1,11 @@
 # Build and run your own intelligent application based on open source using Semantic Kernel and Kaito
 
 ## Prerequisites
+* Terraform
+* Helm
+* Kubectl
+* Python <3.13, >=3.10
+* Jupyter
 
 ### Create Cluster
 
@@ -11,7 +16,6 @@ terraform init
 terraform plan
 terraform apply -auto-approve
 ```
-
 
 
 ### Install Kaito
@@ -40,3 +44,12 @@ kubectl -n falcon apply -f ./k8s/falcon.yaml
 # Expose the wokrspace with the ingress controller
 kubectl -n falcon apply -f ./k8s/falcon-ingress.yaml
 ```
+
+## Run the demo
+
+There are two types of demos available:
+
+* **Falcon Kaito**: This demo uses the Falcon LLM hosted on Kaito with Semantic Kernel. The demo can be found here: `kaito_semantic_kernel_demo.ipynb`
+* **OpenAI**: This demo uses the Azure OpenAI Model with Semantic Kernel.The demo can be found here: `openai_semantic_kernel_demo.ipynb`
+
+To run the Kaito Falcon demo, you might have to change the `url` in the notebook. The OpenAI demo requires an Azure OpenAI account and a proper setup [read more](https://github.com/microsoft/semantic-kernel/tree/main/python#openai--azure-openai-api-keys).
